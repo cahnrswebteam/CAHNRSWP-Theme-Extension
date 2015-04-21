@@ -1,0 +1,371 @@
+/*
+Theme Name: WSU Spine - Extension
+Theme URI: http://cahnrs.wsu.edu/communications/
+Author: CAHNRS Communications, Phil Cable
+Author URI: http://cahnrs.wsu.edu/communications/
+Description: A child theme for WSU Extension web properties.
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Template: WSUWP-spine-parent-theme-20
+*/
+
+html {
+	background-color: #fff;
+}
+
+.has-featured-image .main-header {
+	background: none;
+	height: 350px;
+}
+
+/* CAHNRS 'global' header */
+.cahnrs-header-group,
+.cahnrs-header-group:before,
+.cahnrs-header-group:after,
+.cahnrs-header-group .quicklinks ul {
+	background: rgba( 94, 106, 113, 0.5 );
+}
+.cahnrs-header-group {
+	font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+	letter-spacing: 2px;
+	line-height: 0;
+	max-width: 792px;
+	padding: 1rem 0;
+	position: relative; position: fixed;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: 1;
+}
+.cahnrs-header-group > div,
+.main-header sup:not(.unset) {
+	display: inline-block;
+	font-size: 0.75rem;
+	line-height: 1.5em;
+	position: relative;
+}
+.cahnrs-header-group a,
+.main-header sup:not(.unset) a {
+	color: #fff;
+}
+#cahnrs-heading,
+#extension-heading {
+	border-right: 1px solid #fff;
+	margin-right: 1rem;
+	padding-right: 1rem;
+}
+#cahnrs-heading {
+	margin-left: 2rem;
+}
+
+/* Hover state effects */
+#cahnrs-heading > a,
+#cahnrs-heading + #extension-heading a,
+#cahnrs-heading ~ sup {
+	-webkit-transition: opacity 0.8s ease-in-out;
+	-moz-transition:    opacity 0.8s ease-in-out;
+	-o-transition:      opacity 0.8s ease-in-out;
+	transition:         opacity 0.8s ease-in-out;
+}
+#cahnrs-heading:hover > a,
+#cahnrs-heading:hover + #extension-heading a,
+#cahnrs-heading:hover ~ sup {
+	opacity: 0.1;
+}
+#cahnrs-heading {
+	-webkit-transition: border-right-color 0.8s ease-in-out;
+	-moz-transition:    border-right-color 0.8s ease-in-out;
+	-o-transition:      border-right-color 0.8s ease-in-out;
+	transition:         border-right-color 0.8s ease-in-out;
+}
+#cahnrs-heading:hover {
+	border-right-color: rgba( 255, 255, 255, 0.1 );
+}
+
+/* Quicklinks */
+.cahnrs-header-group .quicklinks {
+	display: none;
+	margin-left: -1rem;
+	padding-top: 1rem;
+	position: absolute;
+	width: 1000%;
+
+	display: block;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	visibility: hidden;
+	-webkit-transition: max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
+	-moz-transition:    max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
+	-o-transition:      max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
+	transition:         max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
+}
+.cahnrs-header-group div:hover .quicklinks {
+	/*display: block;*/
+	max-height: 200px;
+	opacity: 1;
+	visibility: visible;
+}
+.cahnrs-header-group .quicklinks ul {
+	display: inline-block;
+	list-style: none;
+	padding: 1rem 1rem 1rem 10%;
+}
+.cahnrs-header-group .quicklinks li.full-name {
+	font-weight: bold;
+	margin: 0 0 1rem -10%;
+	padding: 0;
+}
+.cahnrs-header-group .quicklinks li:not(.full-name) {
+	border-left: 1px solid transparent;
+	line-height: 1rem;
+	margin: 0.5rem 0 0 1rem;
+	padding: 0 0 0 1rem;
+}
+.cahnrs-header-group .quicklinks li:not(.full-name):hover {
+	border-left: 1px solid #fff;
+	font-weight: bold;
+}
+
+/* Site name */
+.sup-header-default {
+	font-weight: bold;
+}
+
+/* Page title */
+.main-header sub:not(.unset) {
+	font-size: 60px;
+	width: 100%;
+}
+.main-header sub span {
+	bottom: 0;
+	height: 90px;
+	line-height: 0;
+	padding: 0 0 0 2rem;
+	position: absolute;
+	text-transform: uppercase;
+}
+.main-header sub span:after {
+	content: '';
+	display: inline-block;
+	height: 90px;
+}
+
+/* Featured image */
+.featured-image {
+	height: 350px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+.logged-in .featured-image {
+	top: 32px;
+}
+
+/* Full bleed backgrounds */
+/* full spectrum each for orange, green, blue, and yellow */
+.full-bleed.gray-lightest-back, .full-bleed.gray-lightest-back:before, .full-bleed.gray-lightest-back:after { background: rgba( 239, 240, 241, 0.97 ); }
+.full-bleed.gray-lightly-back, .full-bleed.gray-lightly-back:before, .full-bleed.gray-lightly-back:after { background: rgba( 215, 218, 219, 0.97 ); }
+.full-bleed.gray-lighter-back, .full-bleed.gray-lighter-back:before, .full-bleed.gray-lighter-back:after { background: rgba( 181, 186, 190, 0.97 ); }
+.full-bleed.gray-light-back, .full-bleed.gray-light-back:before, .full-bleed.gray-light-back:after { background: rgba( 141, 149, 154, 0.97 ); }
+.full-bleed.gray-back, .full-bleed.gray-back:before, .full-bleed.gray-back:after { background: rgba( 94, 106, 113, 0.97 ); }
+.full-bleed.gray-er-back, .full-bleed.gray-er-back:before, .full-bleed.gray-er-back:after { background: rgba( 255, 255, 255, 0.97 ); }
+.full-bleed.gray-dark-back, .full-bleed.gray-dark-back:before, .full-bleed.gray-dark-back:after { background: rgba( 70, 78, 84, 0.97 ); }
+.full-bleed.gray-darker-back, .full-bleed.gray-darker-back:before, .full-bleed.gray-darker-back:after { background: rgba( 42, 48, 51, 0.97 ); }
+.full-bleed.gray-darkest-back, .full-bleed.gray-darkest-back:before, .full-bleed.gray-darkest-back:after { background: rgba( 0, 0, 0, 0.97 ); }
+
+.gray-light-back { color: #2a3033; }
+.gray-back, .gray-back a, .gray-dark-back, .gray-dark-back a, .gray-darker-back, .gray-darker-back a, gray-darkest-back, .gray-darkest-back a { color: #fff; }
+
+
+
+/* Splash */
+.splash .widget_content_block {
+	display: table;
+	height: 100%;
+	margin-bottom: 0;
+	padding: 0;
+	width: 100%;
+}
+.splash .widget_content_block .item-inner-wrapper {
+	display: table-cell;
+	height: 75vh;
+	padding: 0 2rem;
+	vertical-align: bottom;
+}
+.splash h2 {
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+	padding: 0 0 3rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.splash h3 {
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: normal;
+	padding: 0 0 4rem;
+	text-align: center;
+}
+
+/* More button */
+.more-button {
+	text-align: right;
+}
+.more-button a {
+	border: 1px solid #981e32;
+	color: #981e32;
+	display: inline-block;
+	padding: .5rem 1rem;
+	text-transform: uppercase;
+	-webkit-transition: background-color .2s linear, color .2s linear;
+	-moz-transition:    background-color .2s linear, color .2s linear;
+	-o-transition:      background-color .2s linear, color .2s linear;
+	transition:         background-color .2s linear, color .2s linear;
+}
+.more-button a:hover {
+	background-color: #981e32;
+	color: #fff;
+}
+
+.splash .more-button {
+	margin-bottom: 100px;
+}
+.splash .more-button a {
+	border-color: #fff;
+	color: #fff;
+}
+.splash .more-button a:hover {
+	background-color: rgba( 255, 255, 255, 0.8 );
+	color: #981e32;
+}
+
+@media screen and (min-width:990px) {
+	.full-bleed {
+		margin-left: -2rem;
+		padding-left: 2rem;
+	}
+}
+	
+@media screen and (min-width:694px) {
+	.has-featured-image .cahnrs-header-group:before,
+	.has-featured-image .cahnrs-header-group:after,
+	.full-bleed:before,
+	.full-bleed:after {
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 9999rem;
+		z-index: 1;
+	}
+	.has-featured-image .cahnrs-header-group:before,
+	.full-bleed:before {
+		left: -9999rem;
+		margin-left: -198px;
+	}
+	.has-featured-image .cahnrs-header-group:after,
+	.full-bleed:after {
+		right: -9999rem;
+	}
+
+}
+
+@media screen and (max-width:989px) {
+	.has-featured-image .cahnrs-header-group:before,
+	.full-bleed:before {
+		margin-left: 0;
+	}
+	.featured-image,
+	.logged-in .featured-image {
+		top: 50px;
+	}
+}
+
+@media only screen and (max-width: 693px) {
+	/* Misc overrides. */
+	.single.gutter .column:not(.gutterless) {
+		padding: 0;
+	}
+	.pagebuilder-column .pagebuilder-item {
+		background: none;
+	}
+	
+	/* Splash font sizes. */
+	.splash h2 {
+		font-size: 10vw;
+	}
+	.splash h3 {
+		font-size: 6vw;
+	}
+}
+
+/* Increase column widths at wider max-widths. */
+@media only screen and (min-width:1188px) and (min-device-width:990px) {
+	.hybrid.max-1188 > main > .row.margin-left > .column.two,
+	.hybrid.max-1188 > main > .row.margin-right > .column.one,
+	.hybrid.max-1386 > main > .row.margin-left > .column.two,
+	.hybrid.max-1386 > main > .row.margin-right > .column.one {
+		width: 594px;
+	}
+	.hybrid.max-1188 > main > .row.margin-left > .column.one,
+	.hybrid.max-1188 > main > .row.margin-right > .column.two,
+	.hybrid.max-1386 > main > .row.margin-left > .column.one,
+	.hybrid.max-1386 > main > .row.margin-right > .column.two {
+		width: 198px;
+	}
+	.hybrid.max-1188 > main > .row.side-left > .column.two,
+	.hybrid.max-1188 > main > .row.side-right > .column.one,
+	.hybrid.max-1386 > main > .row.side-left > .column.two,
+	.hybrid.max-1386 > main > .row.side-right > .column.one {
+		width: 660px;
+	}
+	.hybrid.max-1188 > main > .row.side-left > .column.one,
+	.hybrid.max-1188 > main > .row.side-right > .column.two,
+	.hybrid.max-1386 > main > .row.side-left > .column.one,
+	.hybrid.max-1386 > main > .row.side-right > .column.two {
+		width: 330px;
+	}
+	.hybrid.max-1188 > main > .row.thirds > .column,
+	.hybrid.max-1386 > main > .row.thirds > .column {
+		width: 330px;
+	}
+	.hybrid.max-1188 > main > .row.halves > .column,
+	.hybrid.max-1386 > main > .row.halves > .column {
+		width: 495px;
+	}
+	.hybrid.max-1188 > main > .row.single > .column.one,
+	.hybrid.max-1386 > main > .row.single > .column.one {
+		width: 990px;
+	}
+}
+@media only screen and (min-width:1386px) {
+	.hybrid.max-1386 > main > .row.margin-left > .column.two,
+	.hybrid.max-1386 > main > .row.margin-right > .column.one {
+		width: 594px;
+	}
+	.hybrid.max-1386 > main > .row.margin-left > .column.one,
+	.hybrid.max-1386 > main > .row.margin-right > .column.two {
+		width: 198px;
+	}
+	.hybrid.max-1386 > main > .row.side-left > .column.two,
+	.hybrid.max-1386 > main > .row.side-right > .column.one {
+		width: 792px;
+	}
+	.hybrid.max-1386 > main > .row.side-left > .column.one,
+	.hybrid.max-1386 > main > .row.side-right > .column.two {
+		width: 396px;
+	}
+	.hybrid.max-1386 > main > .row.thirds > .column {
+		width: 396px;
+	}
+	.hybrid.max-1386 > main > .row.halves > .column {
+		width: 594px;
+	}
+	.hybrid.max-1386 > main > .row.single > .column.one {
+		width: 1188px;
+	}
+}
