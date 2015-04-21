@@ -106,9 +106,9 @@ body:not(.has-featured-image) .main-header:after {
 	-o-transition:      max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
 	transition:         max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
 }
-.cahnrs-header-group div:hover .quicklinks {
+#cahnrs-heading:hover .quicklinks {
 	/*display: block;*/
-	max-height: 200px;
+	max-height: 12rem;
 	opacity: 1;
 	visibility: visible;
 }
@@ -218,6 +218,7 @@ body:not(.has-featured-image) .main-header:after {
 
 /* More button */
 .more-button {
+	font-weight: bold;
 	text-align: right;
 }
 .more-button a {
