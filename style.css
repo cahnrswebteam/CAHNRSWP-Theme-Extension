@@ -21,17 +21,31 @@ html {
 
 /* CAHNRS 'global' header */
 .cahnrs-header-group,
-.cahnrs-header-group:before,
-.cahnrs-header-group:after,
 .cahnrs-header-group .quicklinks ul {
 	background: rgba( 94, 106, 113, 0.5 );
 }
-
+.colors-green .cahnrs-header-group,
+.colors-green .cahnrs-header-group .quicklinks ul {
+	background: rgba( 143, 126, 53, 0.5 );
+}
+.colors-orange .cahnrs-header-group,
+.colors-orange .cahnrs-header-group .quicklinks ul {
+	background: rgba( 182, 114, 51, 0.5 );
+}
+.colors-blue .cahnrs-header-group,
+.colors-blue .cahnrs-header-group .quicklinks ul {
+	background: rgba( 79, 134, 142, 0.5 );
+}
+.colors-yellow .cahnrs-header-group,
+.colors-yellow .cahnrs-header-group .quicklinks ul {
+	background: rgba( 198, 146, 20, 0.5 );
+}
+.cahnrs-header-group:before,
+.cahnrs-header-group:after,
 body:not(.has-featured-image) .main-header:before,
 body:not(.has-featured-image) .main-header:after {
-	background: #5e6a71;
+	background: inherit;
 }
-
 .cahnrs-header-group {
 	font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
 	letter-spacing: 2px;
@@ -64,7 +78,7 @@ body:not(.has-featured-image) .main-header:after {
 	margin-left: 2rem;
 }
 
-/* Hover state effects */
+/* Hover state */
 #cahnrs-heading > a,
 #cahnrs-heading + #extension-heading a,
 #cahnrs-heading ~ sup {
@@ -171,20 +185,46 @@ body:not(.has-featured-image) .main-header:after {
 
 /* Full bleed backgrounds */
 /* full spectrum each for orange, green, blue, and yellow */
-.full-bleed.gray-lightest-back, .full-bleed.gray-lightest-back:before, .full-bleed.gray-lightest-back:after { background: rgba( 239, 240, 241, 0.97 ); }
-.full-bleed.gray-lightly-back, .full-bleed.gray-lightly-back:before, .full-bleed.gray-lightly-back:after { background: rgba( 215, 218, 219, 0.97 ); }
-.full-bleed.gray-lighter-back, .full-bleed.gray-lighter-back:before, .full-bleed.gray-lighter-back:after { background: rgba( 181, 186, 190, 0.97 ); }
-.full-bleed.gray-light-back, .full-bleed.gray-light-back:before, .full-bleed.gray-light-back:after { background: rgba( 141, 149, 154, 0.97 ); }
-.full-bleed.gray-back, .full-bleed.gray-back:before, .full-bleed.gray-back:after { background: rgba( 94, 106, 113, 0.97 ); }
-.full-bleed.gray-er-back, .full-bleed.gray-er-back:before, .full-bleed.gray-er-back:after { background: rgba( 255, 255, 255, 0.97 ); }
-.full-bleed.gray-dark-back, .full-bleed.gray-dark-back:before, .full-bleed.gray-dark-back:after { background: rgba( 70, 78, 84, 0.97 ); }
-.full-bleed.gray-darker-back, .full-bleed.gray-darker-back:before, .full-bleed.gray-darker-back:after { background: rgba( 42, 48, 51, 0.97 ); }
-.full-bleed.gray-darkest-back, .full-bleed.gray-darkest-back:before, .full-bleed.gray-darkest-back:after { background: rgba( 0, 0, 0, 0.97 ); }
+.full-bleed.gray-lightest-back { background: rgba( 239, 240, 241, 0.97 ); }
+.full-bleed.gray-lightly-back { background: rgba( 215, 218, 219, 0.97 ); }
+.full-bleed.gray-lighter-back { background: rgba( 181, 186, 190, 0.97 ); }
+.full-bleed.gray-light-back { background: rgba( 141, 149, 154, 0.97 ); }
+.full-bleed.gray-back { background: rgba( 94, 106, 113, 0.97 ); }
+.full-bleed.gray-er-back { background: rgba( 255, 255, 255, 0.97 ); }
+.full-bleed.gray-dark-back { background: rgba( 70, 78, 84, 0.97 ); }
+.full-bleed.gray-darker-back { background: rgba( 42, 48, 51, 0.97 ); }
+.full-bleed.gray-darkest-back { background: rgba( 0, 0, 0, 0.97 ); }
+.full-bleed.green-lightest-back { background: rgba( 244, 242, 235, 0.97 ); }
+.full-bleed.green-lightly-back { background: rgba( 227, 223, 205, 0.97 ); }
+.full-bleed.green-lighter-back { background: rgba( 203, 196, 162, 0.97 ); }
+.full-bleed.green-light-back { background: rgba( 175, 163, 112, 0.97 ); }
+.full-bleed.green-back { background: rgba( 143, 126, 53, 0.97 ); }
+.full-bleed.green-er-back { background: rgba( 173, 164, 0, 0.97 ); }
+.full-bleed.green-dark-back { background: rgba( 114, 101, 42, 0.97 ); }
+.full-bleed.green-darker-back { background: rgba( 86, 76, 32, 0.97 ); }
+.full-bleed.green-darkest-back { background: rgba( 57, 50, 21, 0.97 ); }
+.full-bleed.orange-lightest-back { background: rgba( 248, 241, 235, 0.97 ); }
+.full-bleed.orange-lightly-back { background: rgba( 237, 220, 204, 0.97 ); }
+.full-bleed.orange-lighter-back { background: rgba( 221, 190, 161, 0.97 ); }
+.full-bleed.orange-light-back { background: rgba( 203, 155, 110, 0.97 ); }
+.full-bleed.orange-back { background: rgba( 182, 114, 51, 0.97 ); }
+.full-bleed.orange-er-back { background: rgba( 211, 130, 53, 0.97 ); }
+.full-bleed.orange-dark-back { background: rgba( 146, 91, 41, 0.97 ); }
+.full-bleed.orange-darker-back { background: rgba( 109, 68, 31, 0.97 ); }
+.full-bleed.orange-darkest-back { background: rgba( 73, 46, 20, 0.97 ); }
+.full-bleed.blue-lightest-back { background: rgba( 237, 243, 244, 0.97 ); }
+.full-bleed.blue-lightly-back { background: rgba( 211, 225, 227, 0.97 ); }
+.full-bleed.blue-lighter-back { background: rgba( 174, 199, 203, 0.97 ); }
+.full-bleed.blue-light-back { background: rgba( 130, 169, 175, 0.97 ); }
+.full-bleed.blue-back { background: rgba( 79, 134, 142, 0.97 ); }
+.full-bleed.blue-er-back { background: rgba( 0, 165, 189, 0.97 ); }
+.full-bleed.blue-dark-back { background: rgba( 63, 107, 114, 0.97 ); }
+.full-bleed.blue-darker-back { background: rgba( 47, 80, 85, 0.97 ); }
+.full-bleed.blue-darkest-back { background: rgba( 32, 54, 57, 0.97 ); }
 
+.full-bleed:before, .full-bleed:after { background: inherit; }
 .gray-light-back { color: #2a3033; }
 .gray-back, .gray-back a, .gray-dark-back, .gray-dark-back a, .gray-darker-back, .gray-darker-back a, gray-darkest-back, .gray-darkest-back a { color: #fff; }
-
-
 
 /* Splash */
 .splash .widget_content_block {
