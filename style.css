@@ -3,7 +3,7 @@ Theme Name: WSU Spine - Extension
 Theme URI: http://cahnrs.wsu.edu/communications/
 Author: CAHNRS Communications, Phil Cable
 Author URI: http://cahnrs.wsu.edu/communications/
-Description: A child theme for WSU Extension web properties.
+Description: A child theme for the WSU Extension site.
 Version: 0.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -19,25 +19,25 @@ html {
 	height: 350px;
 }
 
-/* CAHNRS 'global' header */
+/* CAHNRS global header */
 .cahnrs-header-group,
-.cahnrs-header-group .quicklinks ul {
+.cahnrs-header-group .quicklinks dl {
 	background: rgba( 94, 106, 113, 0.5 );
 }
 .colors-green .cahnrs-header-group,
-.colors-green .cahnrs-header-group .quicklinks ul {
+.colors-green .cahnrs-header-group .quicklinks dl {
 	background: rgba( 143, 126, 53, 0.5 );
 }
 .colors-orange .cahnrs-header-group,
-.colors-orange .cahnrs-header-group .quicklinks ul {
+.colors-orange .cahnrs-header-group .quicklinks dl {
 	background: rgba( 182, 114, 51, 0.5 );
 }
 .colors-blue .cahnrs-header-group,
-.colors-blue .cahnrs-header-group .quicklinks ul {
+.colors-blue .cahnrs-header-group .quicklinks dl {
 	background: rgba( 79, 134, 142, 0.5 );
 }
 .colors-yellow .cahnrs-header-group,
-.colors-yellow .cahnrs-header-group .quicklinks ul {
+.colors-yellow .cahnrs-header-group .quicklinks dl {
 	background: rgba( 198, 146, 20, 0.5 );
 }
 .cahnrs-header-group:before,
@@ -62,7 +62,6 @@ body:not(.has-featured-image) .main-header:after {
 	display: inline-block;
 	font-size: 0.75rem;
 	line-height: 1rem;
-	position: relative;
 }
 .cahnrs-header-group a,
 .main-header sup:not(.unset) a {
@@ -104,16 +103,13 @@ body:not(.has-featured-image) .main-header:after {
 
 /* Quicklinks */
 .cahnrs-header-group .quicklinks {
-	display: none;
-	margin-left: -1rem;
-	padding-top: 1rem;
-	position: absolute;
-	width: 1000%;
-
 	display: block;
+	margin-left: -1rem;
 	max-height: 0;
 	opacity: 0;
 	overflow: hidden;
+	padding-top: 1rem;
+	position: absolute;
 	visibility: hidden;
 	-webkit-transition: max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
 	-moz-transition:    max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
@@ -121,28 +117,33 @@ body:not(.has-featured-image) .main-header:after {
 	transition:         max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
 }
 #cahnrs-heading:hover .quicklinks {
-	/*display: block;*/
 	max-height: 12rem;
 	opacity: 1;
 	visibility: visible;
 }
-.cahnrs-header-group .quicklinks ul {
-	display: inline-block;
-	list-style: none;
-	padding: 1rem 1rem 1rem 10%;
+.cahnrs-header-group .quicklinks dl {
+	padding: 1rem;
 }
-.cahnrs-header-group .quicklinks li.full-name {
+.cahnrs-header-group .quicklinks dt {
+	display: block;
 	font-weight: bold;
-	margin: 0 0 1rem -10%;
-	padding: 0;
+	padding: 0 0 0.25rem 0;
 }
-.cahnrs-header-group .quicklinks li:not(.full-name) {
-	border-left: 1px solid transparent;
-	line-height: 1rem;
-	margin: 0.5rem 0 0 1rem;
+.cahnrs-ql-padding {
+	display: inline-block;
+	visibility: hidden;
+}
+.cahnrs-header-group .quicklinks ul {
+	list-style: none;
 	padding: 0 0 0 1rem;
 }
-.cahnrs-header-group .quicklinks li:not(.full-name):hover {
+.cahnrs-header-group .quicklinks li {
+	border-left: 1px solid transparent;
+	line-height: 1rem;
+	margin: 0.5rem 0 0 0;
+	padding: 0 0 0 1rem;
+}
+.cahnrs-header-group .quicklinks li:hover {
 	border-left: 1px solid #fff;
 	font-weight: bold;
 }
