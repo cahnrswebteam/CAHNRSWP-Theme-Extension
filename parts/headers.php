@@ -24,7 +24,7 @@ if ( spine_get_option( 'main_header_show' ) == 'true' ) :
 
 	<div class="cahnrs-header-group">
 		<div id="cahnrs-heading">
-			<a href="http://cahnrs.wsu.edu">CAHNRS</a>
+			<a href="http://cahnrs.wsu.edu/">CAHNRS</a>
 			<div class="quicklinks">
 				<dl>
 					<dt><a href="http://cahnrs.wsu.edu/">College of Agricultural, Human, and Natural Resource Sciences</a></dt>

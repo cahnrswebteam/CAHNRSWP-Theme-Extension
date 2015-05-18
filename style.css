@@ -40,6 +40,26 @@ html {
 .colors-yellow .cahnrs-header-group .quicklinks dl {
 	background: rgba( 198, 146, 20, 0.5 );
 }
+.cahnrs-header-group.scrolled,
+.cahnrs-header-group.scrolled .quicklinks dl {
+	background: #5e6a71;
+}
+.colors-green .cahnrs-header-group.scrolled,
+.colors-green .cahnrs-header-group.scrolled .quicklinks dl {
+	background: #8f7e35;
+}
+.colors-orange .cahnrs-header-group.scrolled,
+.colors-orange .cahnrs-header-group.scrolled .quicklinks dl {
+	background: #b67233;
+}
+.colors-blue .cahnrs-header-group.scrolled,
+.colors-blue .cahnrs-header-group.scrolled .quicklinks dl {
+	background: #4f868e;
+}
+.colors-yellow .cahnrs-header-group.scrolled,
+.colors-yellow .cahnrs-header-group.scrolled .quicklinks dl {
+	background: #c69214;
+}
 .cahnrs-header-group:before,
 .cahnrs-header-group:after,
 body:not(.has-featured-image) .main-header:before,
@@ -185,7 +205,6 @@ body:not(.has-featured-image) .main-header:after {
 }
 
 /* Full bleed backgrounds */
-/* full spectrum each for orange, green, blue, and yellow */
 .full-bleed.gray-lightest-back { background: rgba( 239, 240, 241, 0.97 ); }
 .full-bleed.gray-lightly-back { background: rgba( 215, 218, 219, 0.97 ); }
 .full-bleed.gray-lighter-back { background: rgba( 181, 186, 190, 0.97 ); }
@@ -222,7 +241,6 @@ body:not(.has-featured-image) .main-header:after {
 .full-bleed.blue-dark-back { background: rgba( 63, 107, 114, 0.97 ); }
 .full-bleed.blue-darker-back { background: rgba( 47, 80, 85, 0.97 ); }
 .full-bleed.blue-darkest-back { background: rgba( 32, 54, 57, 0.97 ); }
-
 .full-bleed:before, .full-bleed:after { background: inherit; }
 .gray-light-back { color: #2a3033; }
 .gray-back, .gray-back a, .gray-dark-back, .gray-dark-back a, .gray-darker-back, .gray-darker-back a, gray-darkest-back, .gray-darkest-back a { color: #fff; }
@@ -277,7 +295,6 @@ body:not(.has-featured-image) .main-header:after {
 	background-color: #981e32;
 	color: #fff;
 }
-
 .splash .more-button {
 	margin-bottom: 100px;
 }
@@ -345,12 +362,6 @@ body:not(.has-featured-image) .main-header:after {
 	}
 	.pagebuilder-column .pagebuilder-item {
 		background: none;
-	}
-
-	/* CAHNRS quicklinks. */
-	.full-name {
-		max-width: 661px;
-		max-width: calc( 100vw - 10% );
 	}
 
 	/* Splash font sizes. */
