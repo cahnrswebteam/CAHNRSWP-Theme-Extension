@@ -40,22 +40,32 @@ html {
 .colors-yellow .cahnrs-header-group .quicklinks dl {
 	background: rgba( 198, 146, 20, 0.5 );
 }
+body:not(.has-featured-image):not(.home) .cahnrs-header-group,
+body:not(.has-featured-image):not(.home) .cahnrs-header-group .quicklinks dl,
 .cahnrs-header-group.scrolled,
 .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #5e6a71;
 }
+body:not(.has-featured-image):not(.home) .colors-green .cahnrs-header-group,
+body:not(.has-featured-image):not(.home) .colors-green .cahnrs-header-group .quicklinks dl,
 .colors-green .cahnrs-header-group.scrolled,
 .colors-green .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #8f7e35;
 }
+body:not(.has-featured-image):not(.home) .colors-orange .cahnrs-header-group,
+body:not(.has-featured-image):not(.home) .colors-orange .cahnrs-header-group .quicklinks dl,
 .colors-orange .cahnrs-header-group.scrolled,
 .colors-orange .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #b67233;
 }
+body:not(.has-featured-image):not(.home) .colors-blue .cahnrs-header-group,
+body:not(.has-featured-image):not(.home) .colors-blue .cahnrs-header-group .quicklinks dl,
 .colors-blue .cahnrs-header-group.scrolled,
 .colors-blue .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #4f868e;
 }
+body:not(.has-featured-image):not(.home) .colors-yellow .cahnrs-header-group,
+body:not(.has-featured-image):not(.home) .colors-yellow .cahnrs-header-group .quicklinks dl,
 .colors-yellow .cahnrs-header-group.scrolled,
 .colors-yellow .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #c69214;
@@ -298,10 +308,12 @@ body:not(.has-featured-image) .main-header:after {
 .splash .more-button {
 	margin-bottom: 100px;
 }
+.gray-darker-back .more-button a,
 .splash .more-button a {
 	border-color: #fff;
 	color: #fff;
 }
+.gray-darker-back .more-button a:hover,
 .splash .more-button a:hover {
 	background-color: rgba( 255, 255, 255, 0.8 );
 	color: #981e32;
