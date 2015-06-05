@@ -20,52 +20,52 @@ html {
 }
 
 /* CAHNRS global header */
-.cahnrs-header-group,
-.cahnrs-header-group .quicklinks dl {
+.has-featured-image .cahnrs-header-group,
+.has-featured-image .cahnrs-header-group .quicklinks dl {
 	background: rgba( 94, 106, 113, 0.5 );
 }
-.colors-green .cahnrs-header-group,
-.colors-green .cahnrs-header-group .quicklinks dl {
+.has-featured-image .colors-green .cahnrs-header-group,
+.has-featured-image .colors-green .cahnrs-header-group .quicklinks dl {
 	background: rgba( 143, 126, 53, 0.5 );
 }
-.colors-orange .cahnrs-header-group,
-.colors-orange .cahnrs-header-group .quicklinks dl {
+.has-featured-image .colors-orange .cahnrs-header-group,
+.has-featured-image .colors-orange .cahnrs-header-group .quicklinks dl {
 	background: rgba( 182, 114, 51, 0.5 );
 }
-.colors-blue .cahnrs-header-group,
-.colors-blue .cahnrs-header-group .quicklinks dl {
+.has-featured-image .colors-blue .cahnrs-header-group,
+.has-featured-image .colors-blue .cahnrs-header-group .quicklinks dl {
 	background: rgba( 79, 134, 142, 0.5 );
 }
-.colors-yellow .cahnrs-header-group,
-.colors-yellow .cahnrs-header-group .quicklinks dl {
+.has-featured-image .colors-yellow .cahnrs-header-group,
+.has-featured-image .colors-yellow .cahnrs-header-group .quicklinks dl {
 	background: rgba( 198, 146, 20, 0.5 );
 }
-body:not(.has-featured-image):not(.home) .cahnrs-header-group,
-body:not(.has-featured-image):not(.home) .cahnrs-header-group .quicklinks dl,
+.cahnrs-header-group,
+.cahnrs-header-group .quicklinks dl,
 .cahnrs-header-group.scrolled,
 .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #5e6a71;
 }
-body:not(.has-featured-image):not(.home) .colors-green .cahnrs-header-group,
-body:not(.has-featured-image):not(.home) .colors-green .cahnrs-header-group .quicklinks dl,
+.colors-green .cahnrs-header-group,
+.colors-green .cahnrs-header-group .quicklinks dl,
 .colors-green .cahnrs-header-group.scrolled,
 .colors-green .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #8f7e35;
 }
-body:not(.has-featured-image):not(.home) .colors-orange .cahnrs-header-group,
-body:not(.has-featured-image):not(.home) .colors-orange .cahnrs-header-group .quicklinks dl,
+.colors-orange .cahnrs-header-group,
+.colors-orange .cahnrs-header-group .quicklinks dl,
 .colors-orange .cahnrs-header-group.scrolled,
 .colors-orange .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #b67233;
 }
-body:not(.has-featured-image):not(.home) .colors-blue .cahnrs-header-group,
-body:not(.has-featured-image):not(.home) .colors-blue .cahnrs-header-group .quicklinks dl,
+.colors-blue .cahnrs-header-group,
+.colors-blue .cahnrs-header-group .quicklinks dl,
 .colors-blue .cahnrs-header-group.scrolled,
 .colors-blue .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #4f868e;
 }
-body:not(.has-featured-image):not(.home) .colors-yellow .cahnrs-header-group,
-body:not(.has-featured-image):not(.home) .colors-yellow .cahnrs-header-group .quicklinks dl,
+.colors-yellow .cahnrs-header-group,
+.colors-yellow .cahnrs-header-group .quicklinks dl,
 .colors-yellow .cahnrs-header-group.scrolled,
 .colors-yellow .cahnrs-header-group.scrolled .quicklinks dl {
 	background: #c69214;
