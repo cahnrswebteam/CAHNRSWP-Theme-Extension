@@ -20,3 +20,14 @@ function extension_spine_option_defaults( $defaults ) {
 	$defaults['articletitle_header'] = true;
 	return $defaults;
 }
+
+add_filter( 'body_class', 'cahnrswp_custom_body_class' );
+/**
+ * Something like this would come in handy...
+ */
+function cahnrswp_custom_body_class( $classes ) {
+	if ( get_post_meta( get_the_ID(), 'body_class', true ) ) {
+		$classes[] = get_post_meta( get_the_ID(), 'body_class', true );
+	}
+	return $classes;
+}
