@@ -331,7 +331,7 @@ body:not(.has-featured-image) .main-header:after {
 
 @media screen and (min-width:990px) {
 	.has-featured-image #spine:not(.crimson) #glue:before {
-		opacity: 0.9;
+		opacity: 0.97;
 	}
 	.full-bleed {
 		margin-left: -2rem;
