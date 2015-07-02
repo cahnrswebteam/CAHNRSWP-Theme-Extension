@@ -7,72 +7,75 @@ Author URI: http://cahnrs.wsu.edu/communications/
 Template: WSUWP-spine-parent-theme-20
 */
 
-html {
-	background-color: #fff;
+/* CAHNRS header */
+.main-header.gray,
+.main-header.gray .opaque,
+.has-featured-image .gray .cahnrs-header-group,
+.has-featured-image .main-header.gray .cahnrs-header-group.opaque,
+.gray .quicklinks dl,
+.has-featured-image .main-header.gray .opaque .quicklinks dl {
+	background: #5e6a71;
 }
-
+.main-header.green,
+.main-header.green .opaque,
+.has-featured-image .green .cahnrs-header-group,
+.has-featured-image .main-header.green .cahnrs-header-group.opaque,
+.green .quicklinks dl,
+.has-featured-image .main-header.green .opaque .quicklinks dl {
+	background: #8f7e35;
+}
+.main-header.orange,
+.main-header.orange .opaque,
+.has-featured-image .orange .cahnrs-header-group,
+.has-featured-image .main-header.orange .cahnrs-header-group.opaque,
+.orange .quicklinks dl,
+.has-featured-image .main-header.orange .opaque .quicklinks dl {
+	background: #b67233;
+}
+.main-header.blue,
+.main-header.blue .opaque,
+.has-featured-image .blue .cahnrs-header-group,
+.has-featured-image .main-header.blue .cahnrs-header-group.opaque,
+.blue .quicklinks dl,
+.has-featured-image .main-header.blue .opaque .quicklinks dl {
+	background: #4f868e;
+}
+.main-header.yellow,
+.main-header.yellow .opaque,
+.has-featured-image .yellow .cahnrs-header-group,
+.has-featured-image .main-header.yellow .cahnrs-header-group.opaque,
+.yellow .quicklinks dl,
+.has-featured-image .main-header.yellow .opaque .quicklinks dl {
+	background: #c69214;
+}
+.has-featured-image .gray .vellum-50,
+.has-featured-image .gray .vellum-50 .quicklinks dl {
+	background: rgba( 94, 106, 113, 0.5 );
+}
+.has-featured-image .green .vellum-50,
+.has-featured-image .green .vellum-50 .quicklinks dl {
+	background: rgba( 143, 126, 53, 0.5 );
+}
+.has-featured-image .orange .vellum-50,
+.has-featured-image .orange .vellum-50 .quicklinks dl {
+	background: rgba( 182, 114, 51, 0.5 );
+}
+.has-featured-image .blue .vellum-50,
+.has-featured-image .blue .vellum-50 .quicklinks dl {
+	background: rgba( 79, 134, 142, 0.5 );
+}
+.has-featured-image .yellow .vellum-50,
+.has-featured-image .yellow .vellum-50 .quicklinks dl {
+	background: rgba( 198, 146, 20, 0.5 );
+}
+.has-featured-image .main-header .cahnrs-header-group.vellum-100,
+.has-featured-image .main-header .cahnrs-header-group.vellum-100:not(.opaque) .quicklinks dl {
+	background: none;
+}
 .has-featured-image .main-header {
 	background: none;
 	height: 350px;
-}
-
-/* CAHNRS global header */
-.has-featured-image .cahnrs-header-group,
-.has-featured-image .cahnrs-header-group .quicklinks dl {
-	background: rgba( 94, 106, 113, 0.5 );
-}
-.has-featured-image .colors-green .cahnrs-header-group,
-.has-featured-image .colors-green .cahnrs-header-group .quicklinks dl {
-	background: rgba( 143, 126, 53, 0.5 );
-}
-.has-featured-image .colors-orange .cahnrs-header-group,
-.has-featured-image .colors-orange .cahnrs-header-group .quicklinks dl {
-	background: rgba( 182, 114, 51, 0.5 );
-}
-.has-featured-image .colors-blue .cahnrs-header-group,
-.has-featured-image .colors-blue .cahnrs-header-group .quicklinks dl {
-	background: rgba( 79, 134, 142, 0.5 );
-}
-.has-featured-image .colors-yellow .cahnrs-header-group,
-.has-featured-image .colors-yellow .cahnrs-header-group .quicklinks dl {
-	background: rgba( 198, 146, 20, 0.5 );
-}
-.cahnrs-header-group,
-.cahnrs-header-group .quicklinks dl,
-.cahnrs-header-group.scrolled,
-.cahnrs-header-group.scrolled .quicklinks dl {
-	background: #5e6a71;
-}
-.colors-green .main-header,
-.colors-green .cahnrs-header-group,
-.colors-green .cahnrs-header-group .quicklinks dl,
-.colors-green .cahnrs-header-group.scrolled,
-.colors-green .cahnrs-header-group.scrolled .quicklinks dl {
-	background: #8f7e35;
-}
-.colors-orange .main-header,
-.colors-orange .cahnrs-header-group,
-.colors-orange .cahnrs-header-group .quicklinks dl,
-.colors-orange .cahnrs-header-group.scrolled,
-.colors-orange .cahnrs-header-group.scrolled .quicklinks dl {
-	background: #b67233;
-}
-.colors-blue .main-header,
-.colors-blue .cahnrs-header-group,
-.colors-blue .cahnrs-header-group .quicklinks dl,
-.colors-blue .cahnrs-header-group.scrolled,
-.colors-blue .cahnrs-header-group.scrolled .quicklinks dl {
-	background: #4f868e;
-}
-.colors-yellow .main-header,
-.colors-yellow .cahnrs-header-group,
-.colors-yellow .cahnrs-header-group .quicklinks dl,
-.colors-yellow .cahnrs-header-group.scrolled,
-.colors-yellow .cahnrs-header-group.scrolled .quicklinks dl {
-	background: #c69214;
-}
-.has-featured-image .main-header {
-	background: none;
+	z-index: 1;
 }
 .cahnrs-header-group:before,
 .cahnrs-header-group:after,
@@ -86,15 +89,18 @@ body:not(.has-featured-image) .main-header:after {
 	line-height: 0;
 	max-width: 792px;
 	padding: 1rem 0;
-	position: relative; position: fixed;
+	position: relative;
 	text-transform: uppercase;
 	width: 100%;
 	z-index: 1;
 }
+.cahnrs-header-group.fixed {
+	position: fixed;
+}
 .cahnrs-header-group > div,
 .main-header sup:not(.unset) {
 	display: inline-block;
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 	line-height: 1rem;
 }
 .cahnrs-header-group a,
@@ -110,8 +116,6 @@ body:not(.has-featured-image) .main-header:after {
 #cahnrs-heading {
 	margin-left: 2rem;
 }
-
-/* Hover state */
 #cahnrs-heading > a,
 #cahnrs-heading + #extension-heading a,
 #cahnrs-heading ~ sup {
@@ -134,8 +138,6 @@ body:not(.has-featured-image) .main-header:after {
 #cahnrs-heading:hover {
 	border-right-color: rgba( 255, 255, 255, 0.1 );
 }
-
-/* Quicklinks */
 .cahnrs-header-group .quicklinks {
 	display: block;
 	margin-left: -1rem;
@@ -149,6 +151,9 @@ body:not(.has-featured-image) .main-header:after {
 	-moz-transition:    max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
 	-o-transition:      max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
 	transition:         max-height 0.8s ease-in-out, opacity 0.4s ease-in-out, visibility 0.8s ease-in-out;
+}
+.has-featured-image .cahnrs-header-group.vellum-100:not(.opaque) .quicklinks {
+	padding-top: 0;
 }
 #cahnrs-heading:hover .quicklinks {
 	max-height: 12rem;
@@ -194,6 +199,7 @@ body:not(.has-featured-image) .main-header:after {
 }
 .main-header sub span {
 	bottom: 0;
+	color: #f9f9f9;
 	height: 90px;
 	line-height: 0;
 	padding: 0 0 0 2rem;
@@ -214,7 +220,7 @@ body:not(.has-featured-image) .main-header:after {
 	top: 0;
 	z-index: -1;
 }
-.logged-in .featured-image {
+.logged-in:not(.customizer-preview) .featured-image {
 	top: 32px;
 }
 
@@ -324,6 +330,9 @@ body:not(.has-featured-image) .main-header:after {
 }
 
 @media screen and (min-width:990px) {
+	.has-featured-image #spine:not(.crimson) #glue:before {
+		opacity: 0.9;
+	}
 	.full-bleed {
 		margin-left: -2rem;
 		padding-left: 2rem;
