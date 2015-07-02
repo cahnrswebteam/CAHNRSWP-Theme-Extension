@@ -21,3 +21,19 @@ function cahnrswp_custom_body_class( $classes ) {
 	}
 	return $classes;
 }
+
+add_filter( 'theme_page_templates', 'remove_spine_page_templates' );
+/**
+ * Remove most of the Spine page templates.
+ */
+function remove_spine_page_templates( $templates ) {
+	unset( $templates['templates/blank.php'] );
+	unset( $templates['templates/halves.php'] );
+	unset( $templates['templates/margin-left.php'] );
+	unset( $templates['templates/margin-right.php'] );
+	unset( $templates['templates/section-label.php'] );
+	unset( $templates['templates/side-left.php'] );
+	//unset( $templates['templates/side-right.php'] );
+	unset( $templates['templates/single.php'] );
+	return $templates;
+}
