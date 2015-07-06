@@ -13,12 +13,16 @@ function extension_wp_enqueue_scripts() {
 
 add_filter( 'body_class', 'cahnrswp_custom_body_class' );
 /**
- * Something like this would come in handy...
+ * Body classes.
  */
 function cahnrswp_custom_body_class( $classes ) {
 	if ( get_post_meta( get_the_ID(), 'body_class', true ) ) {
 		$classes[] = get_post_meta( get_the_ID(), 'body_class', true );
 	}
+	if ( is_customize_preview() ) {
+		$classes[] = 'customizer-preview';
+	}
+	$classes[] = 'spine-' . esc_attr( spine_get_option( 'spine_color' ) );
 	return $classes;
 }
 
