@@ -9,9 +9,7 @@
 
 			<div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php remove_filter( 'the_content', 'wpautop', 10 ); ?>
 				<?php the_content(); ?>
-				<?php add_filter( 'the_content', 'wpautop', 10 ); ?>
 
 			</div>
 
