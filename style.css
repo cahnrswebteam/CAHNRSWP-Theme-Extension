@@ -529,7 +529,6 @@ body:not(.has-featured-image) .main-header:after {
 		top: 0;
 		visibility: visible;
 		width: 9999rem;
-		z-index: 1;
 	}
 	body:not(.has-featured-image) .main-header:before,
 	.cahnrs-header-group:before,
@@ -542,7 +541,6 @@ body:not(.has-featured-image) .main-header:after {
 	.full-bleed:after {
 		right: -9999rem;
 	}
-
 }
 
 @media screen and (max-width:989px) {
