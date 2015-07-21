@@ -28,6 +28,20 @@ function disable_header_cruft() {
 	remove_action( 'wp_head', 'wp_generator' );
 }
 
+/**
+ * Filter function to remove the tinymce emoji plugin.
+ * 
+ * @param array $plugins  
+ * @return array Difference betwen the two arrays
+ */
+function disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
+}
+
 add_action( 'wp_enqueue_scripts', 'extension_wp_enqueue_scripts', 21 );
 /**
  * Enqueue scripts and styles required for front end pageviews.
