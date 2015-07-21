@@ -19,6 +19,15 @@ $spine_main_header_values = spine_get_main_header();
 
 if ( spine_get_option( 'main_header_show' ) == 'true' ) :
 
+	if ( is_archive() ) {
+		if ( ! is_post_type_archive( 'post' ) || 'post' !== get_post_type() ) {
+			$post_type = get_post_type_object( get_post_type( $post ) );
+			$spine_main_header_values['page_title'] = $post_type->labels->name;
+			$spine_main_header_values['post_title'] = $post_type->labels->name;
+			$spine_main_header_values['sub_header_default'] = $post_type->labels->name;
+		}
+	}
+
 ?>
 <header class="main-header<?php echo ( spine_get_option( 'cahnrs_header_bg_color' ) ) ? ' ' . esc_attr( spine_get_option( 'cahnrs_header_bg_color' ) ) : ' gray'; ?>">
 

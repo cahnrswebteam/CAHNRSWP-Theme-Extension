@@ -1,25 +1,24 @@
 <?php get_header(); ?>
 
-<main class="spine-single-template">
+	<main class="spine-blank-template">
 
-<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-<?php get_template_part('parts/headers'); ?>
-<?php get_template_part('parts/featured-images'); ?>
+			<?php get_template_part('parts/headers'); ?>
+			<?php get_template_part('parts/featured-images'); ?>
 
-<section class="row single gutter pad-ends">
+			<div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="column one">
+				<?php remove_filter( 'the_content', 'wpautop', 10 ); ?>
+				<?php the_content(); ?>
+				<?php add_filter( 'the_content', 'wpautop', 10 ); ?>
 
-		<?php get_template_part('articles/article'); ?>
+			</div>
 
-	</div><!--/column-->
+		<?php endwhile; endif; ?>
 
-</section>
-<?php endwhile; endif; ?>
+		<?php get_template_part( 'parts/footers' ); ?>
 
-	<?php get_template_part( 'parts/footers' ); ?>
-
-</main>
+	</main>
 
 <?php get_footer(); ?>
