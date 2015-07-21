@@ -34,7 +34,7 @@ add_action( 'wp_enqueue_scripts', 'extension_wp_enqueue_scripts', 21 );
  */
 function extension_wp_enqueue_scripts() {
 	wp_dequeue_style( 'spine-theme-extra' );
-	wp_enqueue_script( 'extension-js', get_stylesheet_directory_uri() . '/js/extension.js', array( 'jquery' ), '' );
+	wp_enqueue_script( 'extension-js', get_stylesheet_directory_uri() . '/js/extension.js', array( 'jquery' ) );
 }
 
 add_filter( 'body_class', 'cahnrswp_custom_body_class' );
