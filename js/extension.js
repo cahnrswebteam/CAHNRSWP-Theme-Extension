@@ -11,7 +11,11 @@
 		if ( $( '.splash' ).length > 0 ) {
 			var trigger = $( '.splash .column > :first-child' ).offset().top - 78;
 		} else {
-			var trigger = $( '.sub-header-default').offset().top;
+			if ( $( '.sub-header' ).css('display') != 'none' ) {
+				var trigger = $( '.sub-header-default' ).offset().top;
+			} else {
+				var trigger = $( '.main-header' ).height();
+			}
 		}
 
 		var cahnrs_header = $( '.cahnrs-header-group' ),
