@@ -98,8 +98,7 @@ body:not(.has-featured-image) .main-header:after {
 .main-header sup a {
 	color: #fff;
 }
-#cahnrs-heading,
-#extension-heading {
+#cahnrs-heading {
 	border-right: 1px solid #fff;
 	margin-right: 1rem;
 	padding-right: 1rem;
@@ -108,7 +107,6 @@ body:not(.has-featured-image) .main-header:after {
 	margin-left: 2rem;
 }
 #cahnrs-heading > a,
-#cahnrs-heading + #extension-heading a,
 #cahnrs-heading ~ sup {
 	-webkit-transition: opacity 0.8s ease-in-out;
 	-moz-transition:    opacity 0.8s ease-in-out;
@@ -116,7 +114,6 @@ body:not(.has-featured-image) .main-header:after {
 	transition:         opacity 0.8s ease-in-out;
 }
 #cahnrs-heading:hover > a,
-#cahnrs-heading:hover + #extension-heading a,
 #cahnrs-heading:hover ~ sup {
 	opacity: 0.1;
 }
@@ -279,6 +276,14 @@ body:not(.has-featured-image) .main-header:after {
 	font-weight: normal;
 	padding: 0 0 4rem;
 	text-align: center;
+}
+
+/* Headings */
+.column > h1:nth-child(1),
+.column > h2:nth-child(1),
+.column > h3:nth-child(1),
+.column > h4:nth-child(1) {
+	padding-top: 0;
 }
 
 /* More button */
@@ -627,7 +632,7 @@ input[type=submit].cahnrs-search-submit:focus {
 		margin-left: 0;
 	}
 	.featured-image,
-	.logged-in .featured-image {
+	.logged-in:not(.customizer-preview) .featured-image {
 		top: 50px;
 	}
 }

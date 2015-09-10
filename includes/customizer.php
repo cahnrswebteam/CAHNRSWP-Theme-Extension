@@ -21,10 +21,13 @@ add_action( 'customize_register', 'extension_property_customize_register', 999 )
 function extension_property_customize_register( $wp_customize ) {
 
 	// Remove some Spine options.
-	$wp_customize->remove_control( 'spine_options[articletitle_show]' );
 	$wp_customize->remove_control( 'campus_location' );
 	$wp_customize->remove_control( 'spine_bleed' );
 	$wp_customize->remove_control( 'spine_theme_style' );
+	$wp_customize->remove_control( 'global_main_header_sup' );
+	$wp_customize->remove_control( 'global_main_header_sub' );
+	$wp_customize->remove_control( 'spine_options[articletitle_show]' );
+	$wp_customize->remove_control( 'spine_options[articletitle_header]' );
 
 	// CAHNRS Header options.
 	$wp_customize->add_section( 'cahnrs_header', array(
