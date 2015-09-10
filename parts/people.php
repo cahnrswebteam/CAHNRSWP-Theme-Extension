@@ -19,7 +19,9 @@ if ( $person->terms->wsuwp_university_location ) {
 		?>" />
 
 		<header class="card">
-			<div class="wsuwp-person-name"><?php echo esc_html( $person->title ); ?></div>
+			<div class="wsuwp-person-name">
+				<a class="profile-link" href="<?php echo esc_url( $person->link ); ?>" data-id="<?php echo esc_html( $person->ID ); ?>"><?php echo esc_html( $person->title ); ?></a>
+			</div>
 			<div class="wsuwp-person-position"><?php echo esc_html( $title ); ?></div>
     	<!--<div class="wsuwp-person-email"><a href="mailto:<?php echo esc_html( $email ); ?>"><?php echo esc_html( $email ); ?></a></div>
 			<div class="wsuwp-person-phone"><a href="tel:<?php echo esc_html( $phone ); ?>"><?php echo esc_html( $phone ); ?></a></div>

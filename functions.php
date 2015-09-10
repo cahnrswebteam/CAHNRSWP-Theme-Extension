@@ -15,6 +15,8 @@ class WSU_Extension_Theme {
 		add_filter( 'wsuwp_people_html', array( $this, 'people_wrapper_html' ), 10, 3 );
 		add_filter( 'wsuwp_people_sort_items', array( $this, 'people_sort' ), 10, 1 );
 		add_filter( 'wsuwp_people_item_html', array( $this, 'people_html' ), 10, 3 );
+		add_action( 'wp_ajax_nopriv_profile_request', array( $this, 'profile_request' ) );
+		add_action( 'wp_ajax_profile_request', array( $this, 'profile_request' ) );
 	}
 
 	/**
@@ -61,12 +63,14 @@ class WSU_Extension_Theme {
 	 */
 	public function enqueue_scripts() {
 		wp_dequeue_style( 'spine-theme-extra' );
-		wp_enqueue_script( 'extension-js', get_stylesheet_directory_uri() . '/js/extension.js', array( 'jquery' ) );
+		wp_enqueue_style( 'cahnrs', 'http://m1.wpdev.cahnrs.wsu.edu/global/cahnrs.css', array( 'wsu-spine' ) );
+		wp_enqueue_script( 'cahnrs', 'http://m1.wpdev.cahnrs.wsu.edu/global/cahnrs.js', array( 'jquery' ) );
+		//wp_enqueue_script( 'extension-js', get_stylesheet_directory_uri() . '/js/extension.js', array( 'jquery' ) );
 		$post = get_post();
 		if ( isset( $post->post_content ) && has_shortcode( $post->post_content, 'wsuwp_people' ) ) {
-			wp_enqueue_style( 'cahnrs_people', get_stylesheet_directory_uri() . '/css/people.css' );
-			wp_enqueue_script( 'cahnrs_people', get_stylesheet_directory_uri() . '/js/people.js', array( 'jquery' ) );
-			wp_localize_script( 'cahnrs_people', 'personnel', array( /*'pageid' => $post->ID,*/ 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+			wp_enqueue_style( 'cahnrs-people', get_stylesheet_directory_uri() . '/css/people.css' );
+			wp_enqueue_script( 'cahnrs-people', get_stylesheet_directory_uri() . '/js/people.js', array( 'jquery' ) );
+			wp_localize_script( 'cahnrs-people', 'personnel', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 		}
 	}
 
@@ -107,7 +111,7 @@ class WSU_Extension_Theme {
 			$filters = explode( ',', $atts['filters'] );
 		}
 		ob_start();
-		include_once( __DIR__ . '/parts/people-filters.php' );
+		include_once( __DIR__ . '/parts/people-actions.php' );
 		$html = ob_get_contents();
 		ob_end_clean();
 		return $html;
@@ -150,7 +154,6 @@ class WSU_Extension_Theme {
 	 * @return string The HTML to output for a person.
 	 */
 	public function people_html( $html, $person, $type ) {
-		
 		if ( isset( $person->working_titles[0] ) ) {
 			$title = $person->working_titles[0];
 		} else {
@@ -172,19 +175,29 @@ class WSU_Extension_Theme {
 			$phone = $person->phone;
 		}
 		ob_start();
-
-		/*if ( 'az' === $type ) {
-			include( __DIR__ . '/parts/people-az.php' );
-		} else if ( 'table' === $type ) {
-			include( __DIR__ . '/parts/people-table.php' );
-		} else {*/
-			include( __DIR__ . '/parts/people-basic.php' );
-		//}
-		
+		include( __DIR__ . '/parts/people.php' );
 		$html = ob_get_contents();
 		ob_end_clean();
 		return $html;
-		//}
+	}
+
+	/**
+	 * AJAX profile request.
+	 */
+	public function profile_request() {
+		if ( $_POST['profile'] ) {
+			$response = wp_remote_get( 'https://people.wsu.edu/wp-json/posts/' . $_POST['profile'], array( 'sslverify' => false ) );
+			if ( is_wp_error( $response ) ) {
+				return '<!-- error -->';
+			}
+			$data = wp_remote_retrieve_body( $response );
+			if ( empty( $data ) ) {
+				return '<!-- error -->';
+			}
+			$person = json_decode( $data );
+			include( __DIR__ . '/parts/profile.php' );
+		}
+		exit;
 	}
 
 }

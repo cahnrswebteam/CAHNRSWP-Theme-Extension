@@ -42,4 +42,43 @@ jQuery(document).ready(function($){
 
 	});
 
+	// Show or hide a profile.
+	$( '.wsuwp-person-container' ).on( 'click', '.profile-link', function(e) {
+
+		e.preventDefault();
+
+		var p_link  = $(this),
+				name    = p_link.text(),
+				profile = p_link.parents( '.wsuwp-person-container' ),
+				others  = profile.siblings( '.wsuwp-person-container' ),
+				actions = $( '.people-actions' );
+
+		if ( p_link.hasClass( 'close' ) ) {
+			//p_link.removeClass( 'close' );
+			profile.removeClass( 'active' );
+			profile.find( '.full-profile' ).remove();
+			others.show( 'fast ');
+			actions.show( 'fast ');
+			document.title = default_title;
+		} else {
+			profile.addClass( 'active' );
+			others.hide( 'fast' );
+			actions.hide( 'fast ');
+			//p_link.addClass( 'close' );
+			$.ajax({
+				url: personnel.ajaxurl,
+				type: 'post',
+				data: {
+					action: 'profile_request',
+					profile: $(this).data( 'id' )
+				},
+				success: function( html ) {
+					document.title = name + ' | ' + default_title;
+					profile.append( html );
+				}
+			})
+		}
+
+	});
+
 });

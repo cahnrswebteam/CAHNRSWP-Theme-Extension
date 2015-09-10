@@ -29,7 +29,7 @@ if ( spine_get_option( 'main_header_show' ) == 'true' ) :
 	}
 
 ?>
-<header class="main-header<?php echo ( spine_get_option( 'cahnrs_header_bg_color' ) ) ? ' ' . esc_attr( spine_get_option( 'cahnrs_header_bg_color' ) ) : ' gray'; ?>">
+<header class="main-header brown">
 
 	<div class="cahnrs-header-group<?php
 		echo ( spine_get_option( 'cahnrs_header_fixed' ) ) ? ' fixed' : '';

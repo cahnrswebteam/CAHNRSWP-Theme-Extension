@@ -3,7 +3,7 @@
 	<div class="people-actions-inner">
 
 		<?php //if ( $filters['search'] ) : ?>
-		<input type="search" id="people-search" value="" placeholder="Search" autocomplete="off">
+		<input type="search" id="people-search" class="cahnrs-search-field" value="" placeholder="Search" autocomplete="off">
 		<!--<input type="text" id="personnel-index-search" value="" placeholder="Search" autocomplete="off">
 		<input type="search" class="search-field" placeholder="Search Impact Reports" value="<?php echo get_search_query(); ?>" name="s" title="Search Impact Reports for:" />-->
 		<?php //endif; ?>
@@ -21,12 +21,12 @@
 				}
 			}
 			if ( ! empty( $locations_sortable_items ) ) {
-				?>
-				<h4>Locations</h4>
-				<div class="filter">
-					<ul class="items">
+			?>
+				<h2>Locations</h2>
+				<div class="filter locations-container">
+					<ul class="items browse-terms locations">
 					<?php foreach ( $locations_sortable_items as $item ) { ?>
-						<li>
+						<li class="wsuwp_university_location-<?php echo $item['slug']; ?>">
             	<label>
 								<input type="checkbox" data-filter="location" value="<?php echo $item['slug']; ?>" />
               	<span><?php echo $item['name']; ?></span>
@@ -35,7 +35,7 @@
 					<?php } ?>
 					</ul>
 				</div>
-				<?php
+			<?php
 			}
   	//}
 		?>

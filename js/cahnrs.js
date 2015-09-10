@@ -32,7 +32,7 @@
 	// Accordion.
 	$(function() {
 		$('.cahnrs-accordion > dd').hide();
-		$('.cahnrs-accordion dt').click( function() {
+		$('.cahnrs-accordion').on( 'click', 'dt', function() {
 			$(this).next('dd').toggle().parents('dl').toggleClass('disclosed');
 		})
 	});
