@@ -1,6 +1,6 @@
 (function($){
 
-	// Set height of '.splash' div.
+	// '.splash' div height.
 	$(window).on( 'load resize', function() {
 		$( '.splash' ).height( ( $(window).height() * 0.82 ) - $( '.main-header' ).height() );
 	});
@@ -30,10 +30,10 @@
 	});
 
 	// Accordion.
-	$(function() {
-		$('.cahnrs-accordion > dd').hide();
-		$('.cahnrs-accordion').on( 'click', 'dt', function() {
-			$(this).next('dd').toggle().parents('dl').toggleClass('disclosed');
+	$(document).ready( function() {
+		$( '.cahnrs-accordion > dd' ).hide();
+		$( 'main' ).on( 'click', '.cahnrs-accordion dt', function() {
+			$(this).next( 'dd' ).toggle().parents( 'dl' ).toggleClass( 'disclosed' );
 		})
 	});
 
