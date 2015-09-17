@@ -33,7 +33,11 @@
 	$(document).ready( function() {
 		$( '.cahnrs-accordion > dd' ).hide();
 		$( 'main' ).on( 'click', '.cahnrs-accordion dt', function() {
-			$(this).next( 'dd' ).toggle().parents( 'dl' ).toggleClass( 'disclosed' );
+			if ( $(this).parent( 'dl' ).hasClass( 'slide' ) ) {
+				$(this).next( 'dd' ).slideToggle( 'slow' ).parents( 'dl' ).toggleClass( 'disclosed' );
+			} else {
+				$(this).next( 'dd' ).toggle().parents( 'dl' ).toggleClass( 'disclosed' );
+			}
 		})
 	});
 

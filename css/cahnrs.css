@@ -1,9 +1,14 @@
 /* CAHNRS header */
+.main-header,
 .main-header.gray,
 .main-header.gray .opaque,
+.has-featured-image .cahnrs-header-group,
 .has-featured-image .gray .cahnrs-header-group,
+.has-featured-image .main-header .cahnrs-header-group.opaque,
 .has-featured-image .main-header.gray .cahnrs-header-group.opaque,
+.quicklinks dl,
 .gray .quicklinks dl,
+.has-featured-image .main-header .opaque .quicklinks dl
 .has-featured-image .main-header.gray .opaque .quicklinks dl {
 	background: #5e6a71;
 }
@@ -160,6 +165,10 @@ body:not(.has-featured-image) .main-header:after {
 	display: inline-block;
 	visibility: hidden;
 }
+.cahnrs-header-group .quicklinks dd {
+	display: inline-block;
+	padding-right: .3em;
+}
 .cahnrs-header-group .quicklinks ul {
 	list-style: none;
 	padding: 0 0 0 1rem;
@@ -289,10 +298,12 @@ body:not(.has-featured-image) .main-header:after {
 /* More button */
 .more-button {
 	font-weight: bold;
-	text-align: right;
 }
 .more-button.center {
 	text-align: center;
+}
+.more-button.right {
+	text-align: right;
 }
 .more-button a {
 	border: 1px solid #981e32;
@@ -325,20 +336,20 @@ body:not(.has-featured-image) .main-header:after {
 
 /* Accordion */
 .cahnrs-accordion {
-	margin-bottom: 1px;
+	margin: 0 0 1px 0;
 	padding: 0 1rem 0 2rem;
 }
-.cahnrs-accordion:nth-of-type(odd) {
+/*.cahnrs-accordion:nth-of-type(odd) {
 	background-color: #fff;
 }
 .cahnrs-accordion:nth-of-type(even) {
 	background-color: #f4f4f5;
-}
+}*/
 .cahnrs-accordion dt {
 	background: url(images/plus-crimson.svg) right center no-repeat;
 	cursor: pointer;
 	display: block;
-	padding: 1rem 0;
+	padding: 1rem 1rem 1rem 0;
 }
 .cahnrs-accordion dt:hover {
 	background-image: url(images/plus-red.svg);
@@ -349,18 +360,18 @@ body:not(.has-featured-image) .main-header:after {
 .cahnrs-accordion.disclosed dt:hover {
 	background-image: url(images/x-red.svg);
 }
-.cahnrs-accordion dt h2 {
+.cahnrs-accordion dt * {
 	color: #981e32;
-	font-size: 1rem;
-	font-weight: bold;
 	padding: 0;
 }
-.cahnrs-accordion dt h2:hover {
+.cahnrs-accordion dt *:hover {
 	color: #c60c30;
 }
 .cahnrs-accordion dd {
 	padding: 0;
-	width: 100%;
+}
+.cahnrs-accordion.slide dd {
+	display: block;
 }
 
 /* Search form */
@@ -482,6 +493,13 @@ input[type=submit].cahnrs-search-submit:focus {
 /* Callouts */
 .callout {
 	background-clip: content-box;
+}
+
+@media screen and (min-height: 1000px) {
+	.has-featured-image .main-header,
+	.featured-image {
+		height: 500px;
+	}
 }
 
 @media screen and (min-width:990px) {
