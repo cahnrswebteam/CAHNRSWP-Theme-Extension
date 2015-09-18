@@ -222,6 +222,11 @@
 /* Full bleed */
 .full-bleed {
 	display: table;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
 }
 .full-bleed.gray-lightest-back.vellum-95 { background: rgba( 239, 240, 241, 0.95 ); }
 .full-bleed.gray-lightly-back.vellum-95 { background: rgba( 215, 218, 219, 0.95 ); }
@@ -371,10 +376,8 @@
 	color: #c60c30;
 }
 .cahnrs-accordion dd {
-	padding: 0;
-}
-.cahnrs-accordion.slide dd {
 	display: block;
+	padding: 0;
 }
 
 /* Search form */
