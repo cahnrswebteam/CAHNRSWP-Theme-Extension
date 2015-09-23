@@ -278,27 +278,17 @@
 /* Splash */
 .splash {
 	height: 75vh;
-	position: relative;
+	/*position: relative;*/
+	display: table;
 }
 .row.single.splash .column {
-	bottom: 0;
-	position: absolute;
+	/*bottom: 0;
+	position: absolute;*/
+	display: table-cell;
+	float: none;
+	height: 100%;
+	vertical-align: bottom;
 	width: 100%;
-}
-.splash h2 {
-	color: #fff;
-	font-size: 60px;
-	font-weight: bold;
-	padding: 0 0 3rem;
-	text-align: center;
-	text-transform: uppercase;
-}
-.splash h3 {
-	color: #fff;
-	font-size: 2.5rem;
-	font-weight: normal;
-	padding: 0 0 4rem;
-	text-align: center;
 }
 
 /* Headings */
@@ -333,9 +323,6 @@
 .more-button a:hover {
 	background-color: #981e32;
 	color: #fff;
-}
-.splash .more-button {
-	margin-bottom: 64px;
 }
 .gray-darker-back .more-button a,
 .splash .more-button a {
@@ -492,9 +479,6 @@ input[type=submit].cahnrs-search-submit:focus {
 	font-size: 16px;
 	line-height: 1.2;
 }
-.gray-darker-back .content-item-event-meta {
-	color: #d7dadb;
-}
 
 /* Callouts */
 .callout {
@@ -614,15 +598,15 @@ input[type=submit].cahnrs-search-submit:focus {
 }
 	
 @media screen and (min-width:694px) {
-	:not(.clear-none).full-bleed {
+	.full-bleed:not(.clear-none) {
 		position: relative;
 	}
 	body:not(.has-featured-image) .main-header:before,
 	body:not(.has-featured-image) .main-header:after,
 	.cahnrs-header-group:before,
 	.cahnrs-header-group:after,
-	:not(.clear-none).full-bleed:before,
-	:not(.clear-none).full-bleed:after {
+	.full-bleed:not(.clear-none):before,
+	.full-bleed:not(.clear-none):after {
 		content: '';
 		display: block;
 		height: 100%;
@@ -659,13 +643,6 @@ input[type=submit].cahnrs-search-submit:focus {
 @media only screen and (max-width: 693px) {
 	.main-header sub {
 		font-size: 8.5vw;
-	}
-	/* Splash font sizes. */
-	.splash h2 {
-		font-size: 10vw;
-	}
-	.splash h3 {
-		font-size: 6vw;
 	}
 }
 

@@ -11,7 +11,7 @@ Template: spine
 .main-header.brown,
 .main-header.brown .opaque,
 .has-featured-image .brown .cahnrs-header-group,
-.has-featured-image .main-header.browny .cahnrs-header-group.opaque,
+.has-featured-image .main-header.brown .cahnrs-header-group.opaque,
 .brown .quicklinks dl,
 .has-featured-image .main-header.brown .opaque .quicklinks dl {
 	background: #452325; background: #532400;
@@ -24,4 +24,57 @@ Template: spine
 .has-featured-image .main-header .cahnrs-header-group.vellum-100,
 .has-featured-image .main-header .cahnrs-header-group.vellum-100:not(.opaque) .quicklinks dl {
 	background: none;
+}
+/* Home - 'splash' div */
+.home .splash h2 {
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+	padding: 0 0 3rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.home .splash h3 {
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: normal;
+	padding: 0 0 4rem;
+	text-align: center;
+}
+.home .splash .cahnrs-accordion {
+	margin-bottom: 64px;
+}
+.home .splash .cahnrs-accordion dt,
+.home .splash .cahnrs-accordion.disclosed dt:hover {
+	background: none;
+	padding: 0;
+}
+.home .splash .cahnrs-accordion dt a {
+	padding: .5rem 1rem;
+}
+.home .splash .cahnrs-accordion.disclosed a {
+	background-color: rgba(255,255,255,0.8);
+	color: #981e32;
+}
+.home .splash .cahnrs-accordion dd {
+	background: rgba(255,255,255,0.8);
+	border: 1px solid #fff;
+	margin-top: 1rem;
+	padding: 2rem;
+}
+/* Home - important notices */
+.home .important,
+.home .hybrid.max-1386 .row.single .column.important {
+	float: right;
+	margin-top: 4rem;
+	width: 50%;
+}
+
+@media only screen and (max-width: 693px) {
+	.home .splash h2 {
+		font-size: 10vw;
+	}
+	.home .splash h3 {
+		font-size: 6vw;
+	}
 }

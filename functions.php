@@ -9,6 +9,7 @@ class WSU_Extension_Theme {
 	 */
 	public function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'wp_head', array( $this, 'ie_compat' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 21 );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 		add_filter( 'theme_page_templates', array( $this, 'theme_page_templates' ) );
@@ -51,6 +52,13 @@ class WSU_Extension_Theme {
 		} else {
 			return array();
 		}
+	}
+
+	/**
+	 * Yep.
+	 */
+	public function ie_compat() {
+		echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
 	}
 
 	/**

@@ -2,7 +2,14 @@
 
 	// '.splash' div height.
 	$(window).on( 'load resize', function() {
-		$( '.splash' ).height( ( $(window).height() * 0.82 ) - $( '.main-header' ).height() );
+		//$( '.splash' ).height( ( $(window).height() * 0.82 ) - $( '.main-header' ).height() );
+		var height_adjust;
+		if ( $( '.important' ).length > 0 ) {
+			height_adjust = ( $(window).height() * 0.82 ) - $( '.main-header' ).height() - $( '.important' ).outerHeight(true);
+		} else {
+			height_adjust = ( $(window).height() * 0.82 ) - $( '.main-header' ).height();
+		}
+		$( '.splash' ).height( height_adjust );
 	});
 
 	// Fixed header.
