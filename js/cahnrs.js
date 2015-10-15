@@ -18,7 +18,7 @@
 		if ( $( '.splash' ).length > 0 ) {
 			var trigger = $( '.splash .column > :first-child' ).offset().top - 78;
 		} else {
-			if ( $( '.sub-header' ).css('display') != 'none' ) {
+			if ( $( '.sub-header' ).length > 0 && $( '.sub-header' ).css('display') != 'none' ) {
 				var trigger = $( '.sub-header-default' ).offset().top;
 			} else {
 				var trigger = $( '.main-header' ).height();
