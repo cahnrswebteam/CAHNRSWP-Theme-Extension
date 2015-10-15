@@ -1,0 +1,76 @@
+body {
+	font: 14px/22px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+a {
+	color: #981e32;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 1.1em;
+	margin: 0;
+	padding: .5em 0 .2em 0;
+}
+h1 {
+	font-size: 2rem;
+	padding-top: 0;
+}
+h2 {
+	font-size: 1.8rem;
+}
+h3 {
+	font-size: 1.6rem;
+}
+h4 {
+	font-size: 1.4rem;
+}
+h5 {
+	font-size: 1.2rem;
+}
+h6 {
+	font-size: 1rem;
+}
+/* Diagnostic styles for accessibility */
+img {
+	outline: 5px solid #c60c30;
+}
+img[alt] {
+	outline-width: 0;
+}
+img[alt=""] {
+	outline-width: 5px;
+}
+/* Diganostic styles for deprecated (or empty) tags and attributes */
+b:empty,
+em:empty,
+i:empty
+span:empty,
+strong:empty {
+	background: yellow;
+	padding: 0.5em;
+}
+center,
+font,
+s,
+strike,
+u {
+	background: yellow;
+}
+*[align],
+*[background],
+*[bgcolor],
+*[border],
+*[height],
+*[valign],
+*[width],
+img[hspace],
+img[vspace],
+table[cellspacing],
+table[cellpadding] {
+	outline: 5px solid #c60c30;
+}
+img[width],
+img[height] {
+	outline: 0;
+}

@@ -9,14 +9,15 @@ class WSU_Extension_Theme {
 	 */
 	public function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
-		add_action( 'wp_head', array( $this, 'ie_compat' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 21 );
+		add_action( 'admin_init', array( $this, 'editor_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_scripts' ), 21 );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 		add_filter( 'theme_page_templates', array( $this, 'theme_page_templates' ) );
 	}
 
 	/**
- 	 * Remove some stuff Wordpress adds to the header.
+ 	 * Remove certain things Wordpress adds to the header.
  	 */
 	public function init() {
 		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -55,19 +56,26 @@ class WSU_Extension_Theme {
 	}
 
 	/**
-	 * Yep.
+	 * Editor stylesheet
 	 */
-	public function ie_compat() {
-		echo '<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+	public function editor_styles() {
+		add_editor_style( '/css/editor.css' );
 	}
 
 	/**
-	 * Enqueue custom scripts.
+	 * Enqueue scripts and styles for the front end.
 	 */
 	public function enqueue_scripts() {
-		wp_dequeue_style( 'spine-theme-extra' );
-		wp_enqueue_style( 'cahnrs', 'http://m1.wpdev.cahnrs.wsu.edu/global/cahnrs.css', array( 'wsu-spine' ) );
+		wp_enqueue_style( 'cahnrs', 'http://m1.wpdev.cahnrs.wsu.edu/global/cahnrs.css', array( 'spine-theme' ) );
+		wp_enqueue_style( 'spine-theme-child', get_stylesheet_directory_uri() . '/style.css', array( 'cahnrs' ) );
 		wp_enqueue_script( 'cahnrs', 'http://m1.wpdev.cahnrs.wsu.edu/global/cahnrs.js', array( 'jquery' ) );
+	}
+
+	/**
+	 * Dequeue Spine Bookmark stylesheet.
+	 */
+	public function dequeue_scripts() {
+		wp_dequeue_style( 'spine-theme-extra' );
 	}
 
 	/**

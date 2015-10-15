@@ -7,24 +7,28 @@ Author URI: http://cahnrs.wsu.edu/communications/
 Template: spine
 */
 
+.single-post .main-header {
+	height: 3rem;
+}
+
 /* CAHNRS header */
-.main-header.brown,
-.main-header.brown .opaque,
-.has-featured-image .brown .cahnrs-header-group,
-.has-featured-image .main-header.brown .cahnrs-header-group.opaque,
-.brown .quicklinks dl,
-.has-featured-image .main-header.brown .opaque .quicklinks dl {
+.main-header:before,
+.main-header:after {
+	background: inherit;
+}
+.page .main-header,
+.archive .main-header,
+.cahnrs-header-group,
+.has-featured-image .main-header .opaque,
+.quicklinks dl,
+.has-featured-image .main-header .opaque .quicklinks dl {
 	background: #452325; background: #532400;
 }
-.has-featured-image .brown .vellum-50,
-.has-featured-image .brown .vellum-50 .quicklinks dl {
-	background: rgba( 69, 35, 37, 0.5 );
-	background: rgba( 83, 36, 0, 0.5 );
+.has-featured-image .vellum-50,
+.has-featured-image .vellum-50 .quicklinks dl {
+	background: rgba( 69, 35, 37, 0.5 ); background: rgba( 83, 36, 0, 0.5 );
 }
-.has-featured-image .main-header .cahnrs-header-group.vellum-100,
-.has-featured-image .main-header .cahnrs-header-group.vellum-100:not(.opaque) .quicklinks dl {
-	background: none;
-}
+
 /* Home - 'splash' div */
 .home .splash h2 {
 	color: #fff;
@@ -62,12 +66,32 @@ Template: spine
 	margin-top: 1rem;
 	padding: 2rem;
 }
+
 /* Home - important notices */
 .home .important,
 .home .hybrid.max-1386 .row.single .column.important {
 	float: right;
 	margin-top: 4rem;
 	width: 50%;
+}
+
+@media screen and (min-width:694px) {
+	body:not(.has-featured-image):not(.single-post) .main-header:before,
+	body:not(.has-featured-image):not(.single-post) .main-header:after {
+		content: '';
+		display: block;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		visibility: visible;
+		width: 9999rem;
+	}
+	body:not(.has-featured-image):not(.single-post) .main-header:before {
+		left: -9999rem;
+	}
+	body:not(.has-featured-image):not(.single-post) .main-header:after {
+		right: -9999rem;
+	}
 }
 
 @media only screen and (max-width: 693px) {

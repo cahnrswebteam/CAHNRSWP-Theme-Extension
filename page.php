@@ -2,12 +2,12 @@
 
 	<main class="spine-blank-template">
 
+		<?php get_template_part('parts/headers'); ?>
+		<?php get_template_part('parts/featured-images'); ?>
+
 		<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part('parts/headers'); ?>
-			<?php get_template_part('parts/featured-images'); ?>
-
-			<?php //if ( class_exists( 'pagebuilder' ) ) : ?>
+      <?php if ( class_exists( 'CWP_Pagebuilder' ) && has_shortcode( get_the_content(), 'section' ) ) : ?>
 
 			<div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -15,17 +15,13 @@
 
 			</div>
 
-			<?php /*else : ?>
+			<?php else : ?>
 
 			<section class="row side-right gutter pad-ends">
 
 				<div class="column one">
 
-					<?php while ( have_posts() ) : the_post(); ?>
-
 						<?php get_template_part('articles/article'); ?>
-
-					<?php endwhile; ?>
 
 				</div><!--/column-->
 
@@ -37,7 +33,7 @@
 
 			</section>
 
-			<?php endif; */ ?>
+			<?php endif; ?>
 
 		<?php endwhile; endif; ?>
 

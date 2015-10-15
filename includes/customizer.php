@@ -7,8 +7,11 @@ add_filter( 'spine_option_defaults', 'extension_spine_option_defaults' );
 function extension_spine_option_defaults( $defaults ) {
 	$defaults['campus_location'] = 'extension';
 	$defaults['bleed'] = false;
-	$defaults['articletitle_show'] = false;
+	if ( is_page() || is_archive() ) {
+		$defaults['articletitle_show'] = false;
+	}
 	$defaults['articletitle_header'] = true;
+	$defaults['theme_style'] = 'skeletal';
 	return $defaults;
 }
 
@@ -35,30 +38,10 @@ function extension_property_customize_register( $wp_customize ) {
 		'priority' => 19,
 	));
 
-	$wp_customize->add_setting('spine_options[cahnrs_header_bg_color]', array(
+	$wp_customize->add_setting('spine_options[cahnrs_header_bg_vellum]', array(
 		'default'    => '',
 		'capability' => 'edit_theme_options',
 		'type'       => 'option'
-	));
-
-	$wp_customize->add_control('cahnrs_header_bg_color', array(
-		'settings'   => 'spine_options[cahnrs_header_bg_color]',
-		'label'      => __('Background Color', 'spine'),
-		'section'    => 'cahnrs_header',
-		'type'       => 'select',
-		'choices'    => array(
-			'gray' => 'Gray',
-			'green' => 'Green',
-			'orange' => 'Orange',
-			'blue' => 'Blue',
-			'yellow' => 'Yellow',
-		),
-	));
-
-	$wp_customize->add_setting('spine_options[cahnrs_header_bg_vellum]', array(
-		'default' => '',
-		'capability' => 'edit_theme_options',
-		'type' => 'option'
 	));
 
 	$wp_customize->add_control('cahnrs_header_bg_vellum', array(

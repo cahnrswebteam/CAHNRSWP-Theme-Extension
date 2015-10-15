@@ -14,7 +14,7 @@ if ( spine_get_option( 'main_header_show' ) == 'true' ) :
 	}
 	?>
 
-	<header class="main-header brown">
+	<header class="main-header">
 
 		<div class="cahnrs-header-group<?php
 			echo ( spine_get_option( 'cahnrs_header_fixed' ) ) ? ' fixed' : '';
@@ -40,10 +40,11 @@ if ( spine_get_option( 'main_header_show' ) == 'true' ) :
 				<span class="sup-header-default"><?php echo strip_tags( $spine_main_header_values['sup_header_default'], '<a>' ); ?></span>
 			</sup>
 		</div>
+		<?php if ( is_page() || is_archive() ) : ?>
 		<sub class="sub-header" data-sitename="<?php echo $spine_main_header_values['site_name']; ?>" data-pagetitle="<?php echo $spine_main_header_values['page_title']; ?>" data-posttitle="<?php echo $spine_main_header_values['post_title']; ?>" data-default="<?php echo esc_html($spine_main_header_values['sub_header_default']); ?>" data-alternate="<?php echo esc_html($spine_main_header_values['sub_header_alternate']); ?>">
 			<span class="sub-header-default"><?php echo strip_tags( $spine_main_header_values['sub_header_default'], '<a>' ); ?></span>
 		</sub>
-
+		<?php endif; ?>
 	</header>
 
 <?php endif; ?>
