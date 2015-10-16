@@ -10,7 +10,7 @@ class WSU_Extension_Theme {
 	public function __construct() {
 		add_action( 'init', array( $this, 'init' ) );
 		add_action( 'admin_init', array( $this, 'editor_styles' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 1 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_scripts' ), 21 );
 		add_filter( 'body_class', array( $this, 'body_class' ) );
 		add_filter( 'theme_page_templates', array( $this, 'theme_page_templates' ) );
