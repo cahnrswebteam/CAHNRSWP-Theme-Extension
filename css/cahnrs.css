@@ -158,7 +158,7 @@
 }
 
 /* Site name */
-.sup-header-default {
+.main-header sup span {
 	font-weight: bold;
 }
 
@@ -180,6 +180,11 @@
 	content: '';
 	display: inline-block;
 	height: 90px;
+}
+
+/* Builder - Page title */
+.builder-layout > .article-header {
+	padding: 2rem 2rem 0 2rem;
 }
 
 /* Featured image */
@@ -607,6 +612,9 @@ input[type=submit].cahnrs-search-submit:focus {
 }
 
 @media only screen and (max-width: 693px) {
+	.main-header sup span {
+		line-height: 1.75;
+	}
 	.main-header sub {
 		font-size: 8.5vw;
 	}
