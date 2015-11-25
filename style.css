@@ -34,10 +34,10 @@ Template: spine
 .has-featured-image .vellum-50 .quicklinks dl {
 	background: rgba( 83, 36, 0, 0.5 );
 }
-.cahnrs-header-group .quicklinks {
+.cahnrs-header-group.vellum-100 .quicklinks {
 	padding-top: 0;
 }
-.cahnrs-header-group.opaque .quicklinks {
+.cahnrs-header-group.vellum-100.opaque .quicklinks {
 	padding-top: 1rem;
 }
 
