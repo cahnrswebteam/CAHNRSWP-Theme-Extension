@@ -17,6 +17,7 @@ if ( spine_get_option( 'main_header_show' ) == 'true' ) :
 	<header class="main-header">
 
 		<div class="cahnrs-header-group<?php
+			echo ( spine_get_option( 'cahnrs_fixed_header_behavior' ) ) ? ' disable-js' : '';
 			echo ( spine_get_option( 'cahnrs_header_fixed' ) ) ? ' fixed' : '';
 			echo ( spine_get_option( 'cahnrs_header_bg_vellum' ) ) ? ' ' . esc_attr( spine_get_option( 'cahnrs_header_bg_vellum' ) ) : '';
 		?>">
