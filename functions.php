@@ -66,9 +66,9 @@ class WSU_Extension_Theme {
 	 * Enqueue scripts and styles for the front end.
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_style( 'cahnrs', 'http://m1.wpdev.cahnrs.wsu.edu/global/cahnrs.css', array( 'spine-theme' ) );
+		wp_enqueue_style( 'cahnrs', 'http://repo.wsu.edu/cahnrs/0/cahnrs.min.css', array( 'spine-theme' ) );
 		wp_enqueue_style( 'spine-theme-child', get_stylesheet_directory_uri() . '/style.css', array( 'cahnrs' ) );
-		wp_enqueue_script( 'cahnrs', 'http://m1.wpdev.cahnrs.wsu.edu/global/cahnrs.js', array( 'jquery' ) );
+		wp_enqueue_script( 'cahnrs', 'http://repo.wsu.edu/cahnrs/0/cahnrs.min.js', array( 'jquery' ) );
 	}
 
 	/**
