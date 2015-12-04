@@ -24,9 +24,12 @@ Template: spine
 }
 .page .main-header,
 .archive .main-header,
-.cahnrs-header-group,
-.has-featured-image .main-header .opaque,
+.home .cahnrs-header-group,
+.cahnrs-header-group.opaque,
 .quicklinks dl,
+.has-featured-image .main-header .opaque,
+.main-header .cahnrs-header-group.opaque:before,
+.main-header .cahnrs-header-group.opaque:after,
 .has-featured-image .main-header .opaque .quicklinks dl {
 	background: #532400;
 }
