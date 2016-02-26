@@ -115,6 +115,10 @@ Template: spine
 }
 
 @media only screen and (max-width: 693px) {
+	.main-header sup {
+		display: inline-block;
+		margin: 0;
+	}
 	.home .splash h2 {
 		font-size: 10vw;
 	}

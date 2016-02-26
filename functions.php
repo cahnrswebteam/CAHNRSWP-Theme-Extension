@@ -112,19 +112,17 @@ class WSU_Extension_Theme {
 		unset( $templates['templates/section-label.php'] );
 		unset( $templates['templates/side-left.php'] );
 		unset( $templates['templates/side-right.php'] );
-		unset( $templates['templates/single.php'] );
+		//unset( $templates['templates/single.php'] );
 		return $templates;
 	}
 
 	/**
-	 * Setup the 'global' navigation menu.
+	 * Set up the 'global' navigation menu.
 	 */
 	public function global_menu() {
-		register_nav_menus(
-			array(
-				'global' => 'Global Menu',
-			)
-		);
+		register_nav_menus( array(
+			'global' => 'Global Menu',
+		) );
 	}
 
 	/**
